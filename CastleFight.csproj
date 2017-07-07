@@ -84,7 +84,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CFApplication.cs" />
+    <Compile Include="Assets\DrawMap.cs" />
+    <Compile Include="Assets\LogicMap.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
