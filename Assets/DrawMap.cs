@@ -18,6 +18,7 @@ public class DrawMap : MonoBehaviour {
         {
             for (int j = 0; j < (int)z; j++)
             {
+                //Debug.Log(i + ":" + j);
                 if (!map.Map[i, j])
                 {
                     Instantiate(freePart, new Vector3(i*2, 0, j*2), Quaternion.identity);
