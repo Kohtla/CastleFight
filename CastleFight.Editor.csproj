@@ -5,16 +5,16 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{674EB7B6-A13D-E743-D33B-DD52E4DFE611}</ProjectGuid>
+    <ProjectGuid>{4D6670EA-A13B-FB07-B13D-4345362F8128}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
-    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.6.2f1</UnityVersion>
     <RootNamespace></RootNamespace>
@@ -52,11 +52,26 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\UnityAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TestRunner">
+      <HintPath>Library\UnityAssemblies\UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
       <HintPath>Library\UnityAssemblies\UnityEngine.TestRunner.dll</HintPath>
@@ -64,17 +79,44 @@
     <Reference Include="nunit.framework">
       <HintPath>Library\UnityAssemblies\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.TreeEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.TreeEditor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.HoloLens">
+      <HintPath>Library\UnityAssemblies\UnityEditor.HoloLens.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.Purchasing">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.VR">
+      <HintPath>Library\UnityAssemblies\UnityEditor.VR.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.VR">
       <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -84,36 +126,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\DrawMap.cs" />
-    <Compile Include="Assets\LogicMap.cs" />
-    <Compile Include="Assets\Scripts\CFApplication.cs" />
-    <Compile Include="Assets\Scripts\CFElement.cs" />
-    <Compile Include="Assets\Scripts\Controller\CFController.cs" />
-    <Compile Include="Assets\Scripts\Controller\UIController.cs" />
-    <Compile Include="Assets\Scripts\Model\CFModel.cs" />
-    <Compile Include="Assets\Scripts\View\CFInterface.cs" />
-    <Compile Include="Assets\Scripts\View\CFView.cs" />
-    <Compile Include="Assets\Scripts\mvc_pattern\controller\Controller.cs" />
-    <Compile Include="Assets\Scripts\mvc_pattern\core\BaseApplication.cs" />
-    <Compile Include="Assets\Scripts\mvc_pattern\core\Element.cs" />
-    <Compile Include="Assets\Scripts\mvc_pattern\model\Model.cs" />
-    <Compile Include="Assets\Scripts\mvc_pattern\view\AnimationView.cs" />
-    <Compile Include="Assets\Scripts\mvc_pattern\view\AnimatorView.cs" />
-    <Compile Include="Assets\Scripts\mvc_pattern\view\ColliderView.cs" />
-    <Compile Include="Assets\Scripts\mvc_pattern\view\CollisionView.cs" />
-    <Compile Include="Assets\Scripts\mvc_pattern\view\NotificationView.cs" />
-    <Compile Include="Assets\Scripts\mvc_pattern\view\RaycastView.cs" />
-    <Compile Include="Assets\Scripts\mvc_pattern\view\TimerView.cs" />
-    <Compile Include="Assets\Scripts\mvc_pattern\view\TriggerView.cs" />
-    <Compile Include="Assets\Scripts\mvc_pattern\view\View.cs" />
-    <Compile Include="Assets\Scripts\mvc_pattern\view\ui\ButtonView.cs" />
-    <Compile Include="Assets\Scripts\mvc_pattern\view\ui\DragView.cs" />
-    <Compile Include="Assets\Scripts\mvc_pattern\view\ui\DropView.cs" />
-    <Compile Include="Assets\Scripts\mvc_pattern\view\ui\DropdownView.cs" />
-    <Compile Include="Assets\Scripts\mvc_pattern\view\ui\InputFieldView.cs" />
-    <Compile Include="Assets\Scripts\mvc_pattern\view\ui\SliderView.cs" />
-    <Compile Include="Assets\Scripts\mvc_pattern\view\ui\ToggleView.cs" />
-    <Compile Include="Assets\TestCam.cs" />
+    <ProjectReference Include="CastleFight.csproj">
+      <Project>{674EB7B6-A13D-E743-D33B-DD52E4DFE611}</Project>
+      <Name>CastleFight</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Scripts\mvc_pattern\editor\inspector\NotificationViewInspector.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

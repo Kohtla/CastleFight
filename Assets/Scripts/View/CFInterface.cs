@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using thelab.mvc;
 
-public class CFInterface : CFElement
+public class CFInterface : View<CFApplication>
 {
     public Button chooser;
     public Text current;
@@ -11,21 +12,16 @@ public class CFInterface : CFElement
     {
         Button btn = chooser.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
-        if (app.model.selectedBuilding != "")
-        {
-            current.text = "Выберите место для постройки" + app.model.selectedBuilding;
-        }
+              
     }
 
     void TaskOnClick()
     {
         Debug.Log("You have clicked the button!");
         app.controller.ui.TryToBuild(chooser.name);
+        current.text = "Выберите место для постройки " + chooser.name;
     }
 
-    private void Update()
-    {
-        
-    }
+    
 
 }

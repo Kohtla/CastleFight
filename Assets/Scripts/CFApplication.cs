@@ -1,21 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using thelab.mvc;
 using UnityEngine;
 
-public class CFElement : MonoBehaviour
-{
-    // Gives access to the application and all instances.
-    public CFApplication app { get { return GameObject.FindObjectOfType<CFApplication>(); } }
-}
 
 // 10 Bounces Entry Point.
-public class CFApplication : MonoBehaviour
+public class CFApplication : BaseApplication<CFModel,CFView,CFController>
 {
-    // Reference to the root instances of the MVC.
-    public CFModel model;
-    public CFView view;
-    public CFController controller;
+    // Reference to the root instances of the MVC.    
 
-    // Init things here
-    void Start() { }
+    // Init things here        
 }
