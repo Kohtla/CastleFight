@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using thelab.mvc;
 using UnityEngine;
 
-public class DrawMap : MonoBehaviour {
+public class DrawMap : View<CFApplication> {
     public GameObject freePart;
     public GameObject closedPart;
+    public GameObject parent;
+    private GameObject inst;
     public float x;
     public float z;
 
@@ -21,11 +24,13 @@ public class DrawMap : MonoBehaviour {
                 //Debug.Log(i + ":" + j);
                 if (!map.Map[i, j])
                 {
-                    Instantiate(freePart, new Vector3(i*2, 0, j*2), Quaternion.identity);
+                    inst = Instantiate(freePart, new Vector3(i*2, 0, j*2), Quaternion.identity);
+                    inst.transform.parent = parent.transform;
                 }
                 else
                 {
-                    Instantiate(closedPart, new Vector3(i*2, 0, j*2), Quaternion.identity);
+                    inst = Instantiate(closedPart, new Vector3(i*2, 0, j*2), Quaternion.identity);
+                    inst.transform.parent = parent.transform;
                 }
             }
         }

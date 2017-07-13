@@ -6,6 +6,6 @@ public class MapController : Controller<CFApplication>
 {
     public void Build()
     {
-
+        Debug.Log("Здание построилось!");
     }
 }
